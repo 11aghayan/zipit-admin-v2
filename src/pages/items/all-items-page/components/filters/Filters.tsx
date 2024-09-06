@@ -37,7 +37,7 @@ export default function Filters({ isOpen, handleClose, categories, setCategories
         {
           isLoading
           ?
-          <ListLoader />
+          <ListLoader page='items' />
           :
           isError
           ?
