@@ -1,0 +1,33 @@
+div.endpoint-row {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 99999px;
+  cursor: pointer;
+}
+
+div.endpoint-row.GET {
+  background-color: #383 ;
+}
+
+div.endpoint-row.POST {
+  background-color: #1aa ;
+}
+
+div.endpoint-row.PUT {
+  background-color: #a83 ;
+}
+
+div.endpoint-row.DELETE {
+  background-color: #933 ;
+}
+
+div.endpoint-row > div >  p {
+  color: var(--bg-color);
+  font-size: 1.1rem;
+}
+
+div.endpoint-row > p.method {
+  font-weight: 700;
+}

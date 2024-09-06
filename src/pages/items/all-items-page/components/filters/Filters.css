@@ -1,0 +1,41 @@
+div.filters {
+  scale: 0;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-top);
+  background-color: #00000060;
+}
+
+div.filters.open {
+  scale: 1;
+}
+
+div.filters div.content {
+  translate: -100%;
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--bg-color);
+  transition: translate 200ms ease-in-out;
+  overflow-y: auto;
+}
+
+div.filters.open div.content {
+  translate: 0%;
+}
+
+div.filters.open div.content ul.category-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 1px solid var(--line-color);
+}
+
+div.filters.open div.content ul.category-list li.selected {
+  background-color: var(--hover-color);
+}

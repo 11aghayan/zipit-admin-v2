@@ -1,0 +1,13 @@
+section.item-page--name {
+  grid-area: name;
+}
+
+section.item-page--name > div > input {
+  display: grid;
+  margin-top: 3px;
+  width: 100%;
+}
+
+section.item-page--name > div:last-child {
+  margin-top: 5px;
+}

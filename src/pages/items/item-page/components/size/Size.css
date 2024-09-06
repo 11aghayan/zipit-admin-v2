@@ -1,0 +1,42 @@
+section.item-page--size {
+  grid-area: size;
+}
+
+section.item-page--size div.size-value-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+}
+
+section.item-page--size button.add-new-size-btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line-color);
+  margin-top: 5px;
+  margin-left: auto;
+}
+
+section.item-page--size button.add-new-size-btn:disabled:hover {
+  cursor: initial;
+  background: transparent;
+}
+
+section.item-page--size button.add-new-size-btn:hover {
+  background: var(--hover-color);
+}
+
+section.item-page--size button.add-new-size-btn *:not(p) {
+  padding-top: 2px;
+}
+
+section.item-page--size div.size-unit-container > select {
+  display: block;
+  margin-top: 3px;
+  width: 100%;
+}
+
+@media(min-width: 1000px) {
+  section.item-page--size div.size-value-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

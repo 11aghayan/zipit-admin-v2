@@ -1,0 +1,7 @@
+section.item-page--photos {
+  position: relative;
+  grid-area: photos;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}

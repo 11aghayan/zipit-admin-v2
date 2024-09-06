@@ -1,0 +1,24 @@
+main.endpoint-page {
+  padding: 0.5rem;
+}
+
+main.endpoint-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main.endpoint-page > section {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+main.endpoint-page > section > p.section-header {
+  background: var(--hover-color);
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}

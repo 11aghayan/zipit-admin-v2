@@ -1,0 +1,74 @@
+form.item-page--layout {
+  width: 100%;
+  display: grid;
+  gap: 0.5rem;
+  grid-template: "photos"
+                 "category"
+                 "name"
+                 "min-order"
+                 "price"
+                 "promo"
+                 "description"
+                 "size"
+                 "error-msg"
+                 "save-btn";
+  padding-bottom: 0.5rem;
+}
+
+form.item-page--layout.loading * {
+  cursor: wait;
+}
+
+form.item-page--layout > * {
+  padding: 0.5rem;
+}
+
+div.category-name-container {
+  grid-area: category-name-container;
+}
+
+div.price-promo-min_order-container {
+  grid-area: price-promo-min_order-container;
+}
+
+form.item-page--layout p.error-msg {
+  margin-inline: auto;
+  grid-area: error-msg;
+}
+
+form.item-page--layout > button {
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+form.item-page--layout > button:disabled {
+  cursor: initial;
+  opacity: 0.8;
+}
+
+form.item-page--layout > button:disabled:hover {
+  opacity: 0.8 !important;
+}
+
+form.item-page--layout > button.save-btn {
+  grid-area: save-btn;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+form.item-page--layout > button.save-btn:hover {
+  opacity: 0.9;
+}
+
+/* Media queries */
+
+@media(min-width: 1000px) {
+  form.item-page--layout {
+    grid-template: "photos description description description description"
+                   "category name min-order price promo"
+                   "size size size size size"
+                   "error-msg error-msg error-msg error-msg error-msg"
+                   "save-btn save-btn save-btn save-btn save-btn";
+  }
+}

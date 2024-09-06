@@ -1,0 +1,147 @@
+nav {
+  position: fixed;
+  inset: 0;
+  translate: 100%;
+  background-color: var(--bg-color);
+  transition: translate 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  z-index: var(--z-top);
+}
+
+nav.open {
+  translate: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+nav ul li {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--line-color);
+}
+
+nav ul li.active {
+  background-color: var(--font-color);
+}
+
+nav ul li a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+nav ul li.active a {
+  color: var(--bg-color);
+}
+
+nav div.buttons {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: flex-end;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+}
+
+nav div.buttons a {
+  padding: 0.5rem;
+  border: 1px solid var(--font-color);
+  border-radius: 5px;
+}
+
+nav div.buttons a:not(.disabled):hover {
+  background-color: var(--hover-color);
+  border-color: transparent;
+}
+
+nav div.buttons a.disabled {
+  border: none;
+  background-color: var(--font-color);
+}
+
+nav div.buttons a.disabled * {
+  color: var(--bg-color);
+}
+
+nav div.buttons * * {
+  padding: 0;
+  font-size: 1rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+nav div.buttons button * {
+  color: var(--bg-color);
+}
+
+nav button.logout-btn {
+  background: #aa3333;
+}
+
+nav button.logout-btn:hover {
+  filter: brightness(120%);
+}
+
+nav button.logout-btn:disabled {
+  opacity: 0.6;
+}
+
+/* Media queries */
+
+@media(min-width: 600px) {
+  nav {
+    position: static;
+    translate: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+    z-index: var(--z-low);
+    gap: 5px;
+  }
+  
+  nav ul li {
+    width: 100%;
+    border-bottom: none;
+  }
+
+  nav ul li.active {
+    background-color: transparent;
+    border-bottom: 2px solid #33333380;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  nav ul li.active a {
+    color: var(--font-color);
+  }
+
+  nav div.buttons {
+    position: static;
+  }
+}
+
+@media(min-width: 1000px) {
+  nav ul li:not(.active):hover {
+    border-bottom: 1px solid var(--line-color);
+  }
+}

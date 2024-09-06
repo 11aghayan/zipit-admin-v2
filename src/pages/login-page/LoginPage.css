@@ -1,0 +1,24 @@
+main.login-page {
+  padding: 0.5rem;
+}
+
+main.login-page h1 {
+  font-size: 3rem;
+  line-height: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Media Queries */
+
+@media(min-width: 600px) {
+  main.login-page h1 {
+    font-size: 4rem;
+  }
+}
+
+@media(min-width: 1000px) {
+  main.login-page h1 {
+    font-size: 5rem;
+  }
+}

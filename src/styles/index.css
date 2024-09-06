@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--font-color);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  min-height: 100dvh;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+a.disabled {
+  pointer-events: none;
+}
+
+img {
+  object-fit: cover;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:disabled {
+  cursor: initial !important;
+  opacity: 0.8;
+}
+
+input[type="text"],
+input[type="number"], 
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 1px 1px #00000050;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+ul li.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 7px;
+  background-color: #33333310;
+  font-weight: 600;
+}
+
+ul li.row:hover {
+  background-color: #3333331a;
+}
+
+ul li.row div {
+  max-width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+ul li.row div p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #00000060;
+  display: none;
+  padding: 0.5rem;
+  z-index: var(--z-top);
+}
+
+.error-msg {
+  font-size: 1rem;
+  color: #a33;
+}
+
+/* 
+  Screen Sizes
+  
+  SM < 601px
+  MD > 600px < 1001px
+  LG > 1000px
+*/

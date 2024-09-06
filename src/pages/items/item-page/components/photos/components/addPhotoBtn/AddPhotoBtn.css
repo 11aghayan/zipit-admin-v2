@@ -1,0 +1,32 @@
+button.add-photo-btn {
+  position: relative;
+  background-color: #ddd;
+  border-radius: 0%;
+}
+
+button.add-photo-btn > input#upload-photo-input {
+  display: none;
+}
+
+button.add-photo-btn > label.upload-photo-input {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-low);
+  cursor: pointer;
+}
+
+button.add-photo-btn .icon {
+  font-size: 2rem;
+}
+
+button.add-photo-btn:disabled > label.upload-photo-input {
+  cursor: initial;
+}
+
+button.add-photo-btn:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+button.add-photo-btn:not(:disabled):hover .icon {
+  opacity: 0.7;
+}

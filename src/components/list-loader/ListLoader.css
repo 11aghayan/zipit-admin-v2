@@ -1,0 +1,52 @@
+ul.list-loader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3px;
+  z-index: var(--z-low);
+}
+
+ul.list-loader li {
+  border-radius: 7px;
+  background-color: #dfdfdf;
+  height: 64px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+ul.list-loader li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, #ededed, transparent);
+  animation: loading 3000ms cubic-bezier(.05,.63,1,.47) 20ms infinite;
+}
+
+@keyframes loading {
+  0% {
+    translate: 0 -100%;
+  }
+  100% {
+    translate: 0 100%;
+  }
+}
+
+/* Media queries */
+
+
+@media(min-width: 600px) {
+  ul.list-loader.items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 1000px) {
+  ul.list-loader.items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  ul.list-loader.categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

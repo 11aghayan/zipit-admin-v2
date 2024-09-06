@@ -1,0 +1,13 @@
+button.close-btn {
+  display: block;
+  margin-top: 5px;
+  font-size: 2rem;
+}
+
+button.close-btn.align-right {
+  margin-left: auto;
+}
+
+button.close-btn.hide {
+  display: none;
+}

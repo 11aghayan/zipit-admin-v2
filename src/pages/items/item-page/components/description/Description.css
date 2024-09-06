@@ -1,0 +1,27 @@
+section.item-page--description {
+  grid-area: description;
+  min-width: 60dvw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section.item-page--description > div {
+  flex-grow: 1;
+}
+
+section.item-page--description > div > textarea {
+  display: block;
+  width: 100%;
+  height: calc(100% - 1.6rem);
+  min-height: 100px;
+  resize: none;
+  margin-top: 3px;
+}
+
+
+@media(min-width: 1000px) {
+  section.item-page--description {
+    flex-direction: row;
+  }
+}

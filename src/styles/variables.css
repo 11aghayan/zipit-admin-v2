@@ -1,0 +1,11 @@
+:root {
+  --font-color: #333;
+  --bg-color: #f5f5f5;
+  --hover-color: #33333320;
+  --z-low: 1;
+  --z-medium: 11;
+  --z-high: 111;
+  --z-top: 1111;
+  --z-loader: 11111;
+  --line-color: #00000020;
+}

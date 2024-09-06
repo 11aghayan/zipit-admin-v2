@@ -1,0 +1,32 @@
+section.item-page--category {
+  grid-area: category;
+}
+
+section.item-page--category > p.loader {
+  width: 100%;
+  border: 1px solid var(--font-color);
+  padding: 5px;
+  border-radius: 4px;
+  animation: animate_opacity 1500ms alternate infinite cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+section.item-page--category > div > select {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+  border-radius: 4px;
+}
+
+section.item-page--category > div > select > option {
+  padding: 5px;
+}
+
+@keyframes animate_opacity {
+  0% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}

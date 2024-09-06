@@ -1,0 +1,52 @@
+div.confirm-delete-modal {
+  display: none;
+}
+
+div.confirm-delete-modal.open {
+  display: block;
+}
+
+div.confirm-delete-modal div.content {
+  width: 100%;
+  max-width: 500px;
+  margin: 5rem auto 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+}
+
+div.confirm-delete-modal div.content h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+div.confirm-delete-modal div.content div.errors {
+  margin: 1rem auto 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+div.confirm-delete-modal div.content div.buttons {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div.confirm-delete-modal div.content div.buttons button:disabled {
+  opacity: 0.7;
+}
+
+div.confirm-delete-modal div.content div.buttons button.confirm {
+  font-weight: 500;
+  background: #a23;
+  color: #fff;
+}
+
+div.confirm-delete-modal div.content div.buttons button.confirm:hover {
+  filter: brightness(120%);
+}

@@ -1,0 +1,54 @@
+main.settings-page {
+  padding: 0.5rem;
+}
+
+main.settings-page form {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+main.settings-page form div.top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+main.settings-page form div.input-container div {
+  width: 100%;
+  display: flex;
+}
+
+main.settings-page form input {
+  width: 100%;
+  margin-top: 3px;
+}
+
+main.settings-page p {
+  margin-top: 0.5rem;
+  color: #d23;
+}
+
+main.settings-page form div.bottom {
+  width: 100%;
+}
+
+main.settings-page form div.bottom button.submit-btn {
+  width: calc(100% - 2rem);
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  margin-top: 1rem;
+}
+
+main.settings-page form div.bottom button.submit-btn:disabled {
+  opacity: 0.7;
+}
+
+/* Media queries */
+
+@media(min-width: 600px) {
+  main.settings-page form {
+    margin-top: 5rem;
+  }
+}

@@ -1,0 +1,50 @@
+main.all-items-page {
+  padding: 0.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main.all-items-page div.top, 
+main.all-items-page div.bottom {
+  width: 100%;
+}
+
+main.all-items-page ul.items-list li {
+  padding: 0;
+}
+
+main.all-items-page ul.items-list li a {
+  width: 100%;
+  padding: 1rem;
+}
+
+ul.items-list li a span.unit {
+  text-transform: uppercase;
+}
+
+main.all-items-page ul.items-list li button.delete-btn {
+  font-size: 1.2rem;
+  padding: 8px;
+}
+
+main.all-items-page ul.items-list li button.delete-btn * {
+  color: #d33;
+}
+
+/* Media queries */
+
+@media(min-width: 600px) {
+  main.all-items-page ul.items-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 1000px) {
+  main.all-items-page ul.items-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

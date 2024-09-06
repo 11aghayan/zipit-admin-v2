@@ -1,0 +1,20 @@
+section.item-page--promo {
+  grid-area: promo;
+}
+
+section.item-page--promo > div {
+  margin-top: 3px;
+  position: relative;
+}
+
+section.item-page--promo > div > input {
+  width: 100%;
+}
+
+section.item-page--promo > div > p {
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  translate: 0 -50%;
+  color: #3336;
+}

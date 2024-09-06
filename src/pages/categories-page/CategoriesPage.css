@@ -1,0 +1,12 @@
+main.categories-page {
+  padding: 0.5rem;
+}
+
+/* Media queries */
+
+@media(min-width: 1000px) {
+  main.categories-page ul.categories-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

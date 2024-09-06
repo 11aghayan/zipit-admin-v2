@@ -1,0 +1,35 @@
+section.items-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+section.items-top-row h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+section.items-top-row div.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+section.items-top-row div.buttons * * {
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.5rem;
+}
+
+section.items-top-row div.buttons a,
+section.items-top-row div.buttons button {
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+section.items-top-row div.buttons > *:hover {
+  background-color: var(--hover-color);
+}

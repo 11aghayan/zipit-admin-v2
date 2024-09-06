@@ -1,0 +1,54 @@
+div.photo-list {
+  display: flex;
+  align-items: start;
+  gap: 5px;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+div.photo-list > div {
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+div.photo-list > div.loading {
+  cursor: initial;
+}
+
+div.photo-list > div > img {
+  width: 100%;
+  border: 1px solid var(--line-color);
+}
+
+div.photo-list > div > button.delete-btn {
+  display: none;
+}
+
+div.photo-list > div.selected > button.delete-btn {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0;
+  background-color: #dd223370;
+  z-index: var(--z-low);
+}
+
+div.photo-list > div.selected:hover > button.delete-btn {
+  background-color: #dd223399;
+}
+
+div.photo-list > div.selected:hover > button.delete-btn:disabled {
+  background-color: #dd223370;
+}
+
+div.photo-list > div.selected > button.delete-btn:disabled {
+  cursor: initial !important;
+}
+
+div.photo-list > div.selected > button.delete-btn * {
+  font-size: 2rem;
+  color: #fff;
+}
