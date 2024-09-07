@@ -11,7 +11,7 @@ form.item-page--layout {
                  "description"
                  "size"
                  "error-msg"
-                 "save-btn";
+                 "btn";
 }
 
 form.item-page--layout.loading * {
@@ -36,6 +36,7 @@ form.item-page--layout p.error-msg {
 }
 
 form.item-page--layout > div.btn-container {
+  grid-area: btn;
   width: 100%;
   max-width: 400px;
   margin-inline: auto;
@@ -72,6 +73,6 @@ form.item-page--layout > div.btn-container > button.save-btn:hover {
                    "category name min-order price promo"
                    "size size size size size"
                    "error-msg error-msg error-msg error-msg error-msg"
-                   "save-btn save-btn save-btn save-btn save-btn";
+                   "btn btn btn btn btn";
   }
 }
