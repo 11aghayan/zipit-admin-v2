@@ -38,7 +38,9 @@ export default function CategoryModal({ isOpen, setIsOpen, details, setDetails }
     setNameRu('');
   };
 
-  const handleSave = async () => {
+  const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
     if (details?.label.am === nameAm && details?.label.ru === nameRu) {
       handleClose();
       return;
@@ -69,7 +71,7 @@ export default function CategoryModal({ isOpen, setIsOpen, details, setDetails }
   }, [details?.id]);
   
   return (
-    <div onMouseDown={handleClose} className={`category-modal modal ${isOpen ? 'open' : ''}`}>
+    <form onSubmit={handleSave} onMouseDown={handleClose} className={`category-modal modal ${isOpen ? 'open' : ''}`}>
       <div className='content' onMouseDown={e => e.stopPropagation()}>
         <div className='inputs'>
           <h4 className='header'>{header}</h4>
@@ -84,9 +86,9 @@ export default function CategoryModal({ isOpen, setIsOpen, details, setDetails }
         </div>
         <div className='buttons'>
           <button className='cancel-btn' disabled={isLoading} onClick={handleClose}>Չեղարկել</button>
-          <button className='save-btn' disabled={isLoading} onClick={handleSave}>Պահպանել</button>
+          <button className='save-btn' disabled={isLoading}>Պահպանել</button>
         </div>
       </div>
-    </div>
+    </form>
   );
 }

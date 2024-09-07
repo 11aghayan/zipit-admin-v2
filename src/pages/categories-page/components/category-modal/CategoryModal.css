@@ -1,8 +1,8 @@
-div.category-modal.open {
+form.category-modal.open {
   display: block;
 }
 
-div.category-modal div.content {
+form.category-modal div.content {
   background-color: var(--bg-color);
   margin-inline: auto;
   max-width: 500px;
@@ -14,53 +14,53 @@ div.category-modal div.content {
   justify-content: space-between
 }
 
-div.category-modal div.content h4.header {
+form.category-modal div.content h4.header {
   text-align: center;
   font-weight: 500;
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
-div.category-modal div.content div.input-wrapper {
+form.category-modal div.content div.input-wrapper {
   margin-top: 1rem;
   width: 100%;
 }
 
-div.category-modal div.content div.input-wrapper label {
+form.category-modal div.content div.input-wrapper label {
   font-weight: 500;
 }
 
-div.category-modal div.content div.input-wrapper input {
+form.category-modal div.content div.input-wrapper input {
   margin-top: 3px;
   width: 100%;
   padding: 10px;
 }
 
-div.category-modal div.content div.buttons {
+form.category-modal div.content div.buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-div.category-modal div.content div.buttons button {
+form.category-modal div.content div.buttons button {
   border-radius: 5px;
 }
 
-div.category-modal div.content div.buttons button.save-btn {
+form.category-modal div.content div.buttons button.save-btn {
   background-color: var(--font-color);
   color: var(--bg-color);
   font-weight: 500;
 }
 
-div.category-modal button:disabled,
-div.category-modal input:disabled {
+form.category-modal button:disabled,
+form.category-modal input:disabled {
   opacity: 0.7;
 }
 
 /* Media queries */
 
 @media (min-width: 600px) {
-  div.category-modal div.content {
+  form.category-modal div.content {
     margin-top: 5rem;
     max-height: 600px;
   }

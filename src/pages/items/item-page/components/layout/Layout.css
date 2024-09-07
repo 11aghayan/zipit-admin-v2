@@ -12,7 +12,6 @@ form.item-page--layout {
                  "size"
                  "error-msg"
                  "save-btn";
-  padding-bottom: 0.5rem;
 }
 
 form.item-page--layout.loading * {
@@ -36,28 +35,32 @@ form.item-page--layout p.error-msg {
   grid-area: error-msg;
 }
 
-form.item-page--layout > button {
+form.item-page--layout > div.btn-container {
   width: 100%;
   max-width: 400px;
   margin-inline: auto;
 }
 
-form.item-page--layout > button:disabled {
+form.item-page--layout > div.btn-container > button {
+  width: 100%;
+}
+
+form.item-page--layout > div.btn-container > button:disabled {
   cursor: initial;
   opacity: 0.8;
 }
 
-form.item-page--layout > button:disabled:hover {
+form.item-page--layout > div.btn-container > button:disabled:hover {
   opacity: 0.8 !important;
 }
 
-form.item-page--layout > button.save-btn {
+form.item-page--layout > div.btn-container > button.save-btn {
   grid-area: save-btn;
   background-color: var(--font-color);
   color: var(--bg-color);
 }
 
-form.item-page--layout > button.save-btn:hover {
+form.item-page--layout > div.btn-container > button.save-btn:hover {
   opacity: 0.9;
 }
 

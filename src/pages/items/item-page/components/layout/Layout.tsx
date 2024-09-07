@@ -79,7 +79,9 @@ export default function Layout({ data }: Props) {
         <Promo promo={promo} setPromo={setPromo} />
         <Description description={description} setDescription={setDescription} />
         {error ? <p className='error-msg' >{error}</p> : null}
-        <button className='save-btn' disabled={isLoading}>Պահպանել</button>
+        <div className='btn-container'>
+          <button className='save-btn' disabled={isLoading}>Պահպանել</button>
+        </div>
       </form>
     </LoadingContext.Provider>
   );

@@ -22,6 +22,7 @@ export default function Navbar({ open, handleClose }: Props) {
   const exactPathname = useLocation().pathname;
   const currentPathname = '/' + (useLocation().pathname.split('/')[1] || '');
   const [logoutLoading, setLogoutLoading] = useState(false);
+  
   const handleLogout = async () => {
     try {
       setLogoutLoading(true);
@@ -35,6 +36,10 @@ export default function Navbar({ open, handleClose }: Props) {
     }
   };
   
+  const handleSamePageClose = (shouldClose: boolean) => {
+    if (shouldClose) handleClose();
+  }
+  
   return (
     <nav className={open ? 'open' : ''}>
       <CloseBtn handleClose={handleClose} hide={screen !== 'sm'} icon='arrow-right' />
@@ -44,6 +49,7 @@ export default function Navbar({ open, handleClose }: Props) {
             <li 
               key={pathname} 
               className={currentPathname === pathname ? 'active' : ''}
+              onClick={() => handleSamePageClose(exactPathname === pathname)}
             >
               <a className={exactPathname === pathname ? 'disabled' : ''} href={pathname}>{label}</a>
             </li>
@@ -51,9 +57,16 @@ export default function Navbar({ open, handleClose }: Props) {
         }
       </ul>
       <div className='buttons'>
-        <a href='/settings' className={`settings-btn ${currentPathname === '/settings' ? 'disabled' : ''}`}>
-          <Icon icon='mingcute:settings-2-line' />
-        </a>
+        <div 
+          onClick={() => handleSamePageClose(exactPathname === '/settings')}
+        >
+          <a 
+            href='/settings' 
+            className={`settings-btn ${currentPathname === '/settings' ? 'disabled' : ''}`}  
+          >
+            <Icon icon='mingcute:settings-2-line' />
+          </a>
+        </div>
         <button className='logout-btn' onClick={handleLogout} disabled={logoutLoading}>
           <Icon icon='mdi:logout' />
         </button>

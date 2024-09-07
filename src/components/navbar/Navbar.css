@@ -74,7 +74,7 @@ nav div.buttons a.disabled * {
 
 nav div.buttons * * {
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: fit-content;
   height: fit-content;
 }
@@ -143,5 +143,9 @@ nav button.logout-btn:disabled {
 @media(min-width: 1000px) {
   nav ul li:not(.active):hover {
     border-bottom: 1px solid var(--line-color);
+  }
+
+  nav div.buttons * * {
+    font-size: 1rem;
   }
 }
