@@ -48,13 +48,19 @@ export default function Layout({ data }: Props) {
 
     const body = {
       category,
-      name,
+      name: {
+        am: name.am.trim(),
+        ru: name.ru.trim()
+      },
       price,
       promo,
       size,
       minOrder,
       photos,
-      description
+      description: {
+        am: description.am.trim(),
+        ru: description.ru.trim()
+      }
     };
     
     const res = await add_or_editItem(data === null ? 'post' : 'put', axios, body, id);

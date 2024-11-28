@@ -17,7 +17,7 @@ export default function Name({ name, setName }: Props) {
     return (e: React.ChangeEvent<HTMLInputElement>) => {
       setName(prev => ({
         ...prev,
-        [lang]: e.target.value.trim()
+        [lang]: e.target.value
       }));
     };
   };

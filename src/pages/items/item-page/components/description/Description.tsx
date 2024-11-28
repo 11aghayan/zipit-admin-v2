@@ -16,7 +16,7 @@ export default function Description({ description, setDescription }: Props) {
     return (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       setDescription(prev => ({
         ...prev,
-        [lang]: e.target.value.trim()
+        [lang]: e.target.value
       }));
     };
   };
