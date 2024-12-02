@@ -46,7 +46,7 @@ export default function Category({ category, setCategory }: Props) {
           <select disabled={formLoading} name="item-page-categories" id="item-page-categories" onChange={handleChange} defaultValue={JSON.stringify(category)}>
             {
               allCategories?.map(({ id, label }) => (
-                <option key={id} value={JSON.stringify({id, label})}>
+                <option key={id} value={JSON.stringify({id, name: label})}>
                   {label.am}
                 </option>
               ))
