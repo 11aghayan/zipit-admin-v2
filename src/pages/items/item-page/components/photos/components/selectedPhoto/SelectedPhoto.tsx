@@ -31,15 +31,16 @@ export default function SelectedPhoto({ setSectionHeight, photos, setPhotos, sel
   const handleNameChange = (lang: 'am' | 'ru') => {
     return (e: React.ChangeEvent<HTMLInputElement>) => {
       const setName = lang === 'am' ? setNameAm : setNameRu;
-      setName(e.target.value);
+      const value = e.target.value;
+      setName(value);
       setPhotos(prev => {
-        return prev.map(photo => photo.src === selectedPhoto?.src ? { ...photo, color: { am: nameAm, ru: nameRu } } : photo);
+        return prev.map(photo => photo.src === selectedPhoto?.src ? { ...photo, color: { am: lang === 'am' ? value : photo.color.am, ru: lang === 'ru' ? value : photo.color.ru } } : photo);
       });
     };
   };
 
   useEffect(() => {
-    const wasDeleted = !(photos.find(({ src }) => src.startsWith(selectedPhoto?.src.slice(0, 200) || 'none')));
+    const wasDeleted = !(photos.find(({ src }) => src === selectedPhoto?.src));
     if (wasDeleted) setSelectedPhoto(photos[0]);
   }, [photos]);
   

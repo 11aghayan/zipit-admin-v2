@@ -35,7 +35,7 @@ export default function AddPhotoBtn({ size, photos, setPhotos, setSelectedPhoto 
         }
       };
       
-      const isRepeat = photos.find(({ src }) => src.startsWith(photo.src.slice(0, 200)));
+      const isRepeat = photos.find(({ src }) => src === photo.src);
 
       if (!isRepeat) {
         setSelectedPhoto(photo);
